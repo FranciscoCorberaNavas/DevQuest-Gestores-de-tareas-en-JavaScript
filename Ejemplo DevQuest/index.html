@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TetraUniverse</title>
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="icon" href="images/logo.ico" />
+
+    <!-- Meta tags para SEO y Open Graph -->
+    <meta name="keywords" content="Tetris, Juegos, Torneos, TetraUniverse, Online, Competencia" />
+    <meta name="description" content="Explora, descubre y mejora con técnicas eficientes y torneos exclusivos en TetraUniverse." />
+    <meta property="og:site_name" content="TetraUniverse" />
+    <meta property="og:url" content="https://tu-sitio-web.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TetraUniverse - Tu Universo de Tetris" />
+    <meta property="og:image" content="https://tu-sitio-web.com/images/Logo.png" />
+    <meta property="og:description" content="Explora, descubre y mejora con técnicas eficientes y torneos exclusivos en TetraUniverse." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TetraUniverse - Tu Universo de Tetris" />
+    <meta name="twitter:description" content="Explora, descubre y mejora con técnicas eficientes y torneos exclusivos en TetraUniverse." />
+    <meta name="twitter:image" content="https://tu-sitio-web.com/images/Logo.ico" />
+    <meta name="msapplication-TileColor" content="#fcbf49" />
+    <meta name="theme-color" content="#fcbf49" />
+  </head>
+  <body>
+    <!-- Spinner de carga -->
+    <div id="spinner" class="spinner">
+      <div class="spinner__loader"></div>
+      <p class="spinner__text">¡Bienvenido a TetraUniverse!</p>
+    </div>
+
+    <!-- Header con navegación y breadcrumb integrado -->
+    <header class="header">
+      <div class="header__top">
+        <div class="header__logo">
+          <img src="images/logo.ico" alt="Logo de TetraUniverse" />
+        </div>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item"><a class="nav__link" href="#inicio">Inicio</a></li>
+            <li class="nav__item"><a class="nav__link" href="#nosotros">Nosotros</a></li>
+            <li class="nav__item"><a class="nav__link" href="#registro">Registro</a></li>
+            <li class="nav__item"><a class="nav__link" href="#tecnicas">Técnicas</a></li>
+            <li class="nav__item"><a class="nav__link" href="eventos.html">Torneos</a></li>
+          </ul>
+        </nav>
+      </div>
+      <!-- Separador horizontal -->
+      <hr class="header__divider" />
+      <!-- Breadcrumb integrado en el header -->
+      <nav class="breadcrumb">
+        <ul class="breadcrumb__list">
+          <li class="breadcrumb__item"><a href="index.html">Inicio</a></li>
+          <li class="breadcrumb__item active">TetraUniverse</li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Sección de Inicio -->
+      <section id="inicio" class="section section--inicio">
+        <div class="section__content">
+          <h1 class="section__title">TetraUniverse</h1>
+          <p class="section__text">
+            Explora, descubre y mejora con técnicas eficientes y torneos exclusivos.
+          </p>
+          <a class="btn" href="#registro">¡Regístrate Ahora!</a>
+        </div>
+      </section>
+
+      <!-- Sección de Nosotros -->
+      <section id="nosotros" class="section section--nosotros">
+        <div class="section__content">
+          <h2 class="section__title">Nosotros</h2>
+          <p class="section__text">
+            Somos una comunidad y plataforma dedicada al mundo del Tetris, con torneos y técnicas que te ayudarán a mejorar tu juego.
+          </p>
+          <div class="nosotros__info animate-on-load">
+            <p>Más de 10 años en el mundo del Tetris</p>
+            <p>Estrategias avanzadas y competiciones online</p>
+            <p>Comunidad de jugadores profesionales</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sección de Registro -->
+      <section id="registro" class="section section--registro">
+        <div class="section__content">
+          <h2 class="section__title">Registro</h2>
+          <p class="section__text">
+            Regístrate para acceder a contenido exclusivo y participar en torneos.
+          </p>
+          <form id="registerForm" class="form form--registro" novalidate>
+            <!-- Barra de progreso -->
+            <div class="form__progress">
+              <div id="progressBar" class="form__progress-bar"></div>
+            </div>
+            <!-- Campos básicos -->
+            <div class="form__group">
+              <label for="nombre" class="form__label">Nombre</label>
+              <input type="text" id="nombre" name="nombre" class="form__input" required />
+              <span class="form__error">Por favor, ingresa tu nombre.</span>
+            </div>
+            <div class="form__group">
+              <label for="apellido" class="form__label">Apellido</label>
+              <input type="text" id="apellido" name="apellido" class="form__input" required />
+              <span class="form__error">Por favor, ingresa tu apellido.</span>
+            </div>
+            <div class="form__group">
+              <label for="email" class="form__label">Correo Electrónico</label>
+              <input type="email" id="email" name="email" class="form__input" autocomplete="email" required />
+              <span class="form__error">Ingresa un correo válido.</span>
+            </div>
+            <div class="form__group">
+              <label for="telefono" class="form__label">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" class="form__input" required />
+              <span class="form__error">Ingresa un número de teléfono.</span>
+            </div>
+            <div class="form__group">
+              <label for="password" class="form__label">Contraseña</label>
+              <input type="password" id="password" name="password" class="form__input" required />
+              <span class="form__error">La contraseña es obligatoria.</span>
+            </div>
+            <div class="form__group">
+              <label for="confirmPassword" class="form__label">Confirmar Contraseña</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" class="form__input" required />
+              <span class="form__error">Las contraseñas deben coincidir.</span>
+            </div>
+            <!-- Campos nuevos para tarjeta -->
+            <div class="form__group">
+              <label for="cardNumber" class="form__label">Número de Tarjeta</label>
+              <input type="text" id="cardNumber" name="cardNumber" class="form__input" required />
+              <span class="form__error">Ingresa el número de tarjeta.</span>
+            </div>
+            <div class="form__group">
+              <label for="cardExp" class="form__label">Fecha de Expiración</label>
+              <input type="text" id="cardExp" name="cardExp" class="form__input" placeholder="MM/AA" required />
+              <span class="form__error">Ingresa la fecha de expiración.</span>
+            </div>
+            <div class="form__group">
+              <label for="cardCVV" class="form__label">CVV</label>
+              <input type="text" id="cardCVV" name="cardCVV" class="form__input" required />
+              <span class="form__error">Ingresa el CVV.</span>
+            </div>
+            <div class="form__group">
+              <label for="cardHolder" class="form__label">Nombre del Titular</label>
+              <input type="text" id="cardHolder" name="cardHolder" class="form__input" required />
+              <span class="form__error">Ingresa el nombre del titular.</span>
+            </div>
+            <button type="submit" class="btn">Registrarse</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Modal de confirmación para el registro -->
+      <div id="confirmModal" class="modal">
+        <div class="modal__content">
+          <p>¿Deseas confirmar el registro?</p>
+          <div class="modal__actions">
+            <button id="modalConfirm" class="btn">Confirmar</button>
+            <button id="modalCancel" class="btn">Cancelar</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sección de Técnicas -->
+      <section id="tecnicas" class="section section--tecnicas">
+        <div class="section__content">
+          <h2 class="section__title">Técnicas</h2>
+          <p class="section__text">
+            Aprende estrategias avanzadas para Tetris. Haz clic en cada imagen para ver más detalles.
+          </p>
+          <!-- Filtros por categoría -->
+          <div class="filter">
+            <button class="filter__btn" data-category="openers">Openers</button>
+            <button class="filter__btn" data-category="tspins">T-Spins</button>
+            <button class="filter__btn" data-category="stacking">Stacking</button>
+            <button class="filter__btn" data-category="pc">Perfect Clear</button>
+            <button class="filter__btn" data-category="all">Mostrar Todo</button>
+          </div>
+          <!-- Grid de tarjetas -->
+          <div class="grid">
+            <article class="card" data-category="openers">
+              <img class="card__img" src="images/techniques/tki.png" alt="Opener TKI" />
+              <h3 class="card__title">Opener TKI</h3>
+              <p class="card__text">
+                Un opener popular que lanza un TSD desde el primer bag.
+              </p>
+            </article>
+            <article class="card" data-category="pc">
+              <img class="card__img" src="images/techniques/pc.png" alt="Perfect Clear" />
+              <h3 class="card__title">Perfect Clear</h3>
+              <p class="card__text">
+                Configuraciones para lograr un Perfect Clear con alta probabilidad.
+              </p>
+            </article>
+            <article class="card" data-category="tspins">
+              <img class="card__img" src="images/techniques/t-spin_triple.png" alt="T-Spin Triple" />
+              <h3 class="card__title">T-Spin Triple</h3>
+              <p class="card__text">
+                Técnicas avanzadas para maximizar el potencial del T-Spin.
+              </p>
+            </article>
+            <!-- Agrega más tarjetas según tus categorías -->
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__social">
+        <a href="#" class="footer__link">Twitter</a>
+        <a href="#" class="footer__link">LinkedIn</a>
+        <a href="#" class="footer__link">Instagram</a>
+      </div>
+      <p class="footer__text">
+        &copy; 2025 TetraUniverse. Todos los derechos reservados.
+      </p>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>
